@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Stripe Payment</title>
+</head>
+<body>
+<h1>Stripe Payment Test</h1>
+<button onclick="checkout()">Checkout Now</button>
+
+<script>
+    async function checkout() {
+        const response = await fetch('http://localhost:8083/product/v1/checkout', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: "Test Product",
+                currency: "usd",
+                amount: 1000,
+                quantity: 1
+            })
+        });
+
+        const data = await response.json();
+
+        // Stripe checkout page এ redirect করবে
+        window.location.href = data.sessionUrl;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Cancelled</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            text-align: center;
+            max-width: 500px;
+        }
+        .cancel-icon {
+            font-size: 80px;
+            color: #dc3545;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        p {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .btn {
+            background: #f5576c;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin: 5px;
+            display: inline-block;
+        }
+        .btn:hover {
+            background: #f093fb;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="cancel-icon">❌</div>
+    <h1>Payment Decline</h1>
+    <p>Your Payment Has Been Cancelled</p>
+    <p>Try Again</p>
+    <a href="/" class="btn">Go to home page</a>
+    <a href="/test.html" class="btn">Try again</a>
+</div>
+</body>
+</html>
